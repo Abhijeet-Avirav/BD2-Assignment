@@ -213,13 +213,13 @@ let hotels = [
 ];
 
 function sortHotelByProps(hotel1, hotel2, sortType, props) {
-  if (sortType === 'low-to-high') {
+  if (sortType.toLowerCase() === 'low-to-high') {
     return hotel1[props] - hotel2[props];
-  } else if (sortType === 'high-to-low') {
+  } else if (sortType.toLowerCase() === 'high-to-low') {
     return hotel2[props] - hotel1[props];
-  } else if (sortType === 'least-to-most') {
+  } else if (sortType.toLowerCase() === 'least-to-most') {
     return hotel1[props] - hotel2[props];
-  } else if (sortType === 'most-to-least') {
+  } else if (sortType.toLowerCase() === 'most-to-least') {
     return hotel2[props] - hotel1[props];
   } else {
     throw new Error('Invalid sort type');
